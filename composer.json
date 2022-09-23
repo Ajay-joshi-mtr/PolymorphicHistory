@@ -1,0 +1,54 @@
+{
+    "name": "ajayjoshi/polymorphic-history",
+    "description": "This Package is used for managing model histories using polymorphic relations",
+    "keywords": [
+        "ajayjoshi",
+        "polymorphic-history"
+    ],
+    "homepage": "https://github.com/ajay-joshi-mtr/polymorphic-history",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Ajay Joshi",
+            "email": "ajayjoshi.mtr@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "AjayJoshi\\PolymorphicHistory\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AjayJoshi\\PolymorphicHistory\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AjayJoshi\\PolymorphicHistory\\PolymorphicHistoryServiceProvider"
+            ],
+            "aliases": {
+                "ModelAction": "AjayJoshi\\PolymorphicHistory\\PolymorphicHistoryFacade"
+            }
+        }
+    }
+}
