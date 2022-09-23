@@ -1,6 +1,4 @@
-# Very short description of the package
-
-Logging Actions
+# Logging Actions
 
 ## Installation
 
