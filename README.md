@@ -20,7 +20,7 @@ php artisan vendor:publish --provider="AjayJoshi\PolymorphicHistory\PolymorphicH
 use AjayJoshi\PolymorphicHistory\Traits\ModelHistoryTrait;
 
 
-class PurchaseOrder extends Model
+class Order extends Model
 {
     use HasFactory;
    
@@ -37,22 +37,11 @@ use AjayJoshi\PolymorphicHistory\Enums\ModelHistoryEnum;
 
 class HistoryActions extends ModelHistoryEnum {
    
-   //PO
-   const PURCHASE_ORDER_CREATED = 100;
-   const PURCHASE_ORDER_UPDATED = 101;
-   const PURCHASE_ORDER_DELETED = 102;
-   const PURCHASE_ORDER_EXTENDED = 105;
-
-   const PURCHASE_ORDER_PENDING = 106;
-   const PURCHASE_ORDER_ACCEPTED = 107;
-   const PURCHASE_ORDER_CANCELLED = 108;
-   const PURCHASE_ORDER_REJECTED = 109;
-   const PURCHASE_ORDER_PARTIAL_DELIVERED = 110;
-   const PURCHASE_ORDER_DELIVERED = 111;
+   const ORDER_CREATED = 100;
+   const ORDER_UPDATED = 101;
+   const ORDER_DELETED = 102;
    
-   const SCHEDULE_CREATED = 112;
-   const SCHEDULE_UPDATED = 113;
-   const SCHEDULE_DELETED = 114;
+   //... So on
  
 }
 ```
