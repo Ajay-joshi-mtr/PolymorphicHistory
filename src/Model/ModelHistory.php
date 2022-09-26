@@ -14,6 +14,10 @@ class ModelHistory extends Model {
     {
         return $this->morphTo();
     }
+    public function user(){
+
+        $this->belongsTo(\App\Models\User::class);
+    }
 
     /**
      * returns the entity of the given class
