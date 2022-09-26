@@ -25,7 +25,7 @@ trait ModelHistoryTrait
      * @return ModelHistory
      */
 
-    public function log($obj, $action,$body = NULL,$remark = NULL,$userid = NULL)
+    public function log($obj, $action,$body = NULL,$remark = NULL,$user = null)
     {
         $actions = config('polymorphic-history.actions');
         
@@ -37,7 +37,7 @@ trait ModelHistoryTrait
         $ModelHistory->historiable_id =  $obj->id;
         $ModelHistory->historiable_type = get_class($obj);
 
-        $ModelHistory->user_id = $userid;
+        $ModelHistory->user_id = $user ? $user->id :auth()->user()->id ;
 
 
         $ModelHistory->action = $actions::getKeyForValue($action);
