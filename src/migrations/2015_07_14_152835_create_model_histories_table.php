@@ -20,6 +20,7 @@ class CreateModelHistoriesTable extends Migration
             $table->timestamp('date', $precision = 0)->useCurrent();
             $table->integer('action_id')->unsigned();
             $table->string('action');
+            $table->unsignedBigInteger('user_id');
             $table->timestamps();
         });
     }
