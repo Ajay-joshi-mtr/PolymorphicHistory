@@ -14,7 +14,7 @@ trait ModelHistoryTrait
      */
     public function modelActivity()
     {
-        return $this->morphMany(ModelHistory::class, 'historiable')->orderBy("created_at", "DESC");
+        return $this->morphMany(ModelHistory::class, 'historiable')->orderBy("id", "DESC");
     }
 
     /**
