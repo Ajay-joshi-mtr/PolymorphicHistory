@@ -20,7 +20,7 @@ class PolymorphicHistory
         $ModelHistory->historiable_id =  $obj->id;
         $ModelHistory->historiable_type = get_class($obj);
 
-        $ModelHistory->user_id = $user ? $user->id :auth()->user()->id ;
+        $ModelHistory->user_id = $user ? $user->id :NULL ;
 
 
         $ModelHistory->action = $actions::getKeyForValue($action);
